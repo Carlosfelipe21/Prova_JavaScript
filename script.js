@@ -1,23 +1,22 @@
-let numero_01 = Number(prompt("Digite o Primeiro Numero: "))
-let numero_02 = Number(prompt("Digite o Segundo Numero: "))
+let idade = Number(prompt("Digite Sua Idade:"))
+let status_s = prompt("Digite Seu Status: resgistrado / nao Resgistrado")
 
-let resultado = numero_01
-resultado += numero_02
-console.log("Soma: " + resultado)
+let maior_idade = (idade >= 18) ? true : false
+console.log(maior_idade ? "Voce é Maior de Idade." : "Voçe é Menor de Idade.")
 
-resultado = numero_01
-resultado -= numero_02
-console.log("Subtração: " + resultado)
+switch(status_s){
+    case "resistrado":
+        console.log("Bem Vindo Ao Sistema!")
+        break
+    case "nao resistrado":
+        console.log("Por Favor Complete Seu Resistro.")
+        break
+    default:
+        console.log("Status Desconhecido")
+}
 
-resultado = numero_01
-resultado *= numero_02
-console.log("Multiplicação: " + resultado)
-
-resultado = numero_01
-resultado /= numero_02
-console.log("Divisão: " + resultado)
-
-resultado = numero_01
-resultado %= numero_02
-console.log("Resto da divisão: " + resultado)
-
+if(maior_idade && status_s === "resistrado"){
+    console.log("Voçe Tem Acesso Completo Ao Sistema.")
+}else{
+    console.log("Voçe Tem Acesso Limitado Ao Sistema.")
+}
